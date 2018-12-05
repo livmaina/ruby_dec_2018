@@ -1,0 +1,99 @@
+ Create 5 users
+    -User.create(first_name:"Olivia", last_name:"Maina", email_address:"olivia.maina@gmail.com")
+    -User.create(first_name:"Demi", last_name:"Lovato", email_address:"demi.lovato@gmail.com")
+    -User.create(first_name:"Beyonce", last_name:"Knowles", email_address:"beyonce.knowles@gmail.com")
+    -User.create(first_name:"Santa", last_name:"Claus", email_address:"santa.claus@gmail.com")
+    -User.create(first_name:"Betty", last_name:"Smith", email_address:"betty.smith@gmail.com")
+
+ Create 5 blogs
+    -Blog.create(name:"Holidays",description:"Discussing your favorite holidays and how to celebrate and decorate!")
+    -Blog.create(name:"Travel Destinations",description:"Helping you decide where to next for your next vacation")
+    -Blog.create(name:"Choosing a School",description:"Get familiar with some schools and pick the right one that fits you!")
+    -Blog.create(name:"Self Care",description:"Learn all about the habits you should create and things you should do to enhance your way of life")
+    -Blog.create(name:"Business Planning",description:"Wanting to start a business? Don't know where to start? Need some tips? Join us!")
+
+ Have the first 3 blogs be owned by the first user
+    -Owner.create(user:User.first, blog:Blog.first)
+    -Owner.create(user:User.first, blog:Blog.second)
+    -Owner.create(user:User.first, blog:Blog.third)
+
+ Have the 4th blog you create be owned by the second user
+    -Owner.create(user:User.second, blog:Blog.fourth)
+
+ Have the 5th blog you create be owned by the last user
+    -Owner.create(user:User.last, blog:Blog.last)
+
+ Have the third user own all of the blogs that were created.
+    -Owner.create(user:User.third, blog:Blog.first)
+    -Owner.create(user:User.third, blog:Blog.second)
+    -Owner.create(user:User.third, blog:Blog.third)
+    -Owner.create(user:User.third, blog:Blog.fourth)
+    -Owner.create(user:User.third, blog:Blog.fifth)
+
+ Have the first user create 3 posts for the blog with an id of 2. Remember that you shouldn't do 
+ Post.create(user: User.first, blog_id: 2) but more like Post.create(user: User.first, blog: Blog.find(2)).
+ Again, you should never reference the foreign key in Rails.
+    -Post.create(title:"France", content:"Tourist attractions like Eiffel Tower, Arc de Triomph, Musee du Louvre", user:User.first, blog:Blog.second)
+    -Post.create(title:"Egypt", content:"Visit the beautiful pyramids and eat their infamous street food", user:User.first, blog:Blog.second)
+    -Post.create(title:"Kenya", content:"Go on an unforgettable safari through the forest, and check out the breath taking beaches under the beautiful sunrise", user:User.first, blog:Blog.second)
+
+ Have the second user create 5 posts for the last Blog.
+    -Post.create(title:"Business Ideas",content:"Make sure you have a clear idea of what you want to accomplish and the audience you wantot reach" user:User.second, blog:Blog.last)
+    -Post.create(title:"Money Moves",content:"Do you know how much it will take to get this started? Investors? Loan? Begin to strategize" user:User.second, blog:Blog.last)
+    -Post.create(title:"Location", content:"Will your business need a location? A place to attract customers, or a factory for labor? Begin to strategize",user:User.second, blog:Blog.last)
+    -Post.create(title:"Marketing", content:"How are you going to advertise your product? There are numerous ways to do so. Social media? Billboards? Whats best for your company?", user:User.second, blog:Blog.last)
+    -Post.create(title:"Success", content:"By now, you've begun the process of becoming a successful business owner! Congrats!", user:User.second, blog:Blog.last)
+ 
+ Have the 3rd user create several posts for different blogs.
+    -Post.create(title:"Christmas", content:"The birth of Jesus Christ is celebrated widely everywhere in so many ways!", user:User.third, blog:Blog.first)
+    -Post.create(title:"New Years", content:"New Years celebration is a time many celebrate the renewal of themselves", user:User.third, blog:Blog.first)
+    -Post.create(title:"NC State", content:"In the heart of Raleigh, NC is the wolfpack university thats known for their engineering and veterinary program", user:User.third, blog:Blog.third)
+    -Post.create(title:"East Carolina University", content:"Known for their intense school spirit, ECU is nestled in a small town of Greenville, NC and specializes in nursing and acting", user:User.third, blog:Blog.third)
+    -Post.create(title:"Exercise",content:"The benefits of working out surpass just looking good, it gives you energy, better sleep, and so much more", user:User.third, blog:Blog.fourth)
+    -Post.create(title:"Adequate Sleep", content:"Did you know you shorten your life span if you are constantly sleep deprived?", user:User.third, blog:Blog.fourth)
+
+ Have the 3rd user create 2 messages for the first post created and 3 messages for the second post created
+    -Message.create(author:"John",message:"The 3 hour wait in the line was worth it to be able to go to the top of the Eiffel Tower!", user:User.third, post:Post.first)
+    -Message.create(author:"Jane", message:"Took a boat ride along the Seine during the sunset, just stunning",user:User.third, post:Post.first)
+    
+    -Message.create(author:"Diane", message:"The walks between each pyramid was strenuous, but I definitely suggest visiting each one!", user:User.third, post:Post.second)
+    -Message.create(author:"Gloria", message:"The best food I've ever had was prepared after hours in a food truck. A must have!", user:User.third, post:Post.second)
+    -Message.create(author:"Steve", message:"Had the chance to attend a wedding, and Egyptians make it a weekend affair!", user:User.third, post:Post.second)
+
+ Have the 4th user create 3 messages for the last post you created.
+    -Message.create(author:"Miley", message:"I got 8 full hours of sleep for the first time in 3 years, never felt more rested!", user:User.fourth, post:Post.last)
+    -Message.create(author:"Christina", message:"As difficult as it is, I will try to go to bed earlier, I just have a newborn", user:User.fourth, post:Post.last)
+    -Message.create(author:"Sam", message:"I'm a night owl, and I have to wake up early, I guess I'll just die early", user:User.fourth, post:Post.last)
+
+ Change the owner of the 2nd post to the last user.
+    - owner = Owner.find(2)
+    - owner.user = User.last 
+    - owner.save
+
+ Change the 2nd post's content to be something else.
+    -post = Post.find(2)
+    -post.content = "Walk along the busy streets of Cairo, and experience the amazing night life"
+    -post.save
+
+ Retrieve all blogs owned by the 3rd user (make this work by simply doing: User.find(3).blogs).
+    -User.find(3).blogs
+
+ Retrieve all posts that were created by the 3rd user
+    -User.find(3).posts
+
+ Retrieve all messages left by the 3rd user
+    -User.find(3).messages
+
+ *Retrieve all posts associated with the blog id 5 as well as who left these posts.
+    -Blog.find(5).posts
+    -Blog.find(5).posts.select(:user_id)
+
+ *Retrieve all messages associated with the blog id 5 along with all the user information of those who left the messages
+    -Blog.find(5).posts.messages
+
+ Grab all user information of those that own the first blog (make this work by allowing Blog.first.owners to work).
+    -Blog.first.owners
+
+ Change it so that the first blog is no longer owned by the first user.
+    - owner = Owner.first
+    - owner.user = User.second

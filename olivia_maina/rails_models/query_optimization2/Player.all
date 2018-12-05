@@ -1,0 +1,35 @@
++----+----------------+----------------+----------------+---------------+----------------+
+| id | name           | mascot         | stadium        | created_at    | updated_at     |
++----+----------------+----------------+----------------+---------------+----------------+
+| 1  | Atlanta Hawks  | Skyhawk        | Philips Arena  | 2018-11-30... | 2018-11-30 ... |
+| 2  | Boston Celtics | Lucky the L... | TD Garden      | 2018-11-30... | 2018-11-30 ... |
+| 3  | Brooklyn Nets  | BrooklyKnight  | Barclays Ce... | 2018-11-30... | 2018-11-30 ... |
+| 4  | Charlotte H... | Hugo the Ho... | Spectrum Ce... | 2018-11-30... | 2018-11-30 ... |
+| 5  | Chicago Bulls  | Benny the Bull | United Center  | 2018-11-30... | 2018-11-30 ... |
+| 6  | Cleveland C... | Moondog        | Quicken Loa... | 2018-11-30... | 2018-11-30 ... |
+| 7  | Dallas Mave... | Champ          | American Ai... | 2018-11-30... | 2018-11-30 ... |
+| 8  | Denver Nuggets | Rocky the M... | Pepsi Center   | 2018-11-30... | 2018-11-30 ... |
+| 9  | Detroit Pis... | Hooper         | The Palace ... | 2018-11-30... | 2018-11-30 ... |
+| 10 | Golden Stat... | Thunder        | Oracle Arena   | 2018-11-30... | 2018-11-30 ... |
+| 11 | Houston Roc... | Clutch         | Toyota Center  | 2018-11-30... | 2018-11-30 ... |
+| 12 | Indiana Pacers | Boomer the ... | Bankers Lif... | 2018-11-30... | 2018-11-30 ... |
+| 13 | Los Angeles... | Chuck          | Staples Center | 2018-11-30... | 2018-11-30 ... |
+| 14 | Los Angeles... | Jack Nicholson | Staples Center | 2018-11-30... | 2018-11-30 ... |
+| 15 | Memphis Gri... | Griz           | FedExForum     | 2018-11-30... | 2018-11-30 ... |
+| 16 | Miami Heat     | Burnie         | American Ai... | 2018-11-30... | 2018-11-30 ... |
+| 17 | Milwaukee B... | Bango          | BMO Harris ... | 2018-11-30... | 2018-11-30 ... |
+| 18 | Minnesota T... | Crunch the ... | Target Center  | 2018-11-30... | 2018-11-30 ... |
+| 19 | New Orleans... | Pierre the ... | Smoothie Ki... | 2018-11-30... | 2018-11-30 ... |
+| 20 | New York Kn... | Spike Lee      | Madison Squ... | 2018-11-30... | 2018-11-30 ... |
+| 21 | Oklahoma Ci... | Rumble the ... | Chesapeake ... | 2018-11-30... | 2018-11-30 ... |
+| 22 | Orlando Magic  | Stuff the M... | Amway Center   | 2018-11-30... | 2018-11-30 ... |
+| 23 | Philadelphi... | Franklin th... | Wells Fargo... | 2018-11-30... | 2018-11-30 ... |
+| 24 | Phoenix Suns   | The Suns Go... | Talking Sti... | 2018-11-30... | 2018-11-30 ... |
+| 25 | Portland Tr... | Blaze the T... | Moda Center    | 2018-11-30... | 2018-11-30 ... |
+| 26 | Sacramento ... | Slamson the... | Golden 1 Ce... | 2018-11-30... | 2018-11-30 ... |
+| 27 | San Antonio... | The Coyote     | AT&T Center    | 2018-11-30... | 2018-11-30 ... |
+| 28 | Toronto Rap... | Raptor         | Air Canada ... | 2018-11-30... | 2018-11-30 ... |
+| 29 | Utah Jazz      | Jazz Bear      | Vivint Smar... | 2018-11-30... | 2018-11-30 ... |
+| 30 | Washington ... | G. Wiz         | Verizon Center | 2018-11-30... | 2018-11-30 ... |
++----+----------------+----------------+----------------+---------------+----------------+
+30 rows in set

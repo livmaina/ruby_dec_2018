@@ -1,0 +1,19 @@
+rails g model Comment imageable:references{polymorphic}\
+rake db:migrate
+
+Creating Comments:
+
+Comment.create(comments_id: 1, comments_type: "Blog")
+Comment.create(comments_id: 1, comments_type: "Post")
+Comment.create(comments_id: 1, comments_type: "Message")
+Comment.create(comments_id: 1, comments_type: "User")
+
+Deleting Comments:
+comment = Comment.first
+comment.destroy
+comment.save
+
+Updating Comments:
+comment = Comment.first
+comment.comments_type = Blog 
+comment.save
